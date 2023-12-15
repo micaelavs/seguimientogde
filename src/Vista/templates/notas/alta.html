@@ -1,0 +1,104 @@
+<form id="{{{FORM}}}" class="alta" method='POST' action="">
+<div class= "row">
+  <div style="display:none;" class="alert alert-danger fade in alert-dismissable" id="aviso"></div>
+</div>  
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="nota">Nota GDE<span class="required">*</span></label>
+      <input type="text" class="form-control" id="nota" name="nota" value="{{{NOTA}}}">
+      <label><i>(Ej.: NO-2020-39117039-APN-DNTTF#MTR)</i></label>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="form-group">
+      <label for="fecha_recepcion" class="control-label">Fecha recepción<span class="text-danger"> *</span></label>
+        <div class='input-group date fecha_recepcion'>
+          <input type='text' class="form-control" id="fecha_recepcion" name="fecha_recepcion" value="{{{FECHA_RECEPCION}}}">
+          <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="form-group">
+      <label class="control-label" for="cant_dias">Días para contestar<span class="required">*</span></label>
+      <input type="number" class="form-control" id="cant_dias" name="cant_dias" value="{{{DIAS}}}">
+    </div>
+  </div>
+  <div class="col-md-2">
+      <label class="control-label" for="tipo">Tipo<span class="required">*</span></label>
+        <select class="form-control" id="tipo" name="tipo">
+          <option value=""> Seleccione </option>
+          {{{TIPO}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/TIPO}}}
+        </select>
+  </div>
+  <div class="col-md-3">
+      <label id="reparticion_bloque" class="control-label" for="reparticion">Repartición<span class="required">*</span></label>
+        {{{INPUT_REPARTICION_SELECT}}}
+          <select class="form-control" id="id_reparticion" name="id_reparticion">
+            <option value=""> Seleccione </option>
+            {{{REPARTICION_SELECT}}}
+              <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+            {{{/REPARTICION_SELECT}}}
+          </select>
+        {{{/INPUT_REPARTICION_SELECT}}}
+        {{{INPUT_REPARTICION_TEXT}}}
+          <input type="text" class="form-control" id="reparticion" name="reparticion" value="{{{REPARTICION_TEXT}}}">
+        {{{/INPUT_REPARTICION_TEXT}}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="remitente">Remitente<span class="required">*</span></label>
+      <input type="text" class="form-control" id="remitente" name="remitente" value="{{{REMITENTE}}}">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="control-label" for="id_area">Área<span class="required">*</span></label>
+      <select class="form-control" id="id_area" name="id_area">
+        <option value=""> Seleccione </option>
+          {{{AREA}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/AREA}}}
+      </select>
+  </div>
+  <div class="col-md-3">
+    <label class="control-label" for="id_objeto">Objeto<span class="required">*</span></label>
+      <select class="form-control" id="id_objeto" name="id_objeto">
+        <option value=""> Seleccione </option>
+          {{{OBJETO}}}
+            <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+          {{{/OBJETO}}}
+      </select>
+  </div>
+    <div class="col-md-3">
+    <div class="form-group">
+      <label for="fecha_vencimiento" class="control-label">Fecha vencimiento<span class="text-danger"> *</span></label>
+        <div class='input-group date fecha_vencimiento'>
+          <input readonly="readonly" type='text' class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" value="{{{FECHA_VENCIMIENTO}}}">
+          <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+        </div>
+    </div>
+  </div>
+</div>  
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+      <label class="control-label" for="referencia">Referencia<span class="required">*</span></label>
+      <input type="text" class="form-control" id="referencia" name="referencia" value="{{{REFERENCIA}}}">
+    </div>
+  </div>
+</div>  
+<br>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-right">
+      <button type="submit" class="btn btn-primary" data-placement="left" name="boton_nota" value="{{{OPERACION}}}" id='boton_nota' title="Guardar">GUARDAR</button>
+      <a href="{{{CANCELAR}}}" class="btn btn-default" >CANCELAR</a>
+    </div>
+</div>
+</form>

@@ -1,0 +1,32 @@
+<form id="{{{FORM}}}" method='POST' action="" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <label class="control-label" for="id_area">Area<span class="text-danger"> *</span></label>
+            <select class="form-control" id="id_area" name="id_area">
+                   <option value=""> Seleccione </option>
+                    {{{AREA}}}
+                    <option value="{{{VALUE}}}" {{{SELECTED}}}{{{BORRADO}}}>{{{TEXT}}}</option>
+                    {{{/AREA}}}
+                </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" for="nombre">Objeto<span class="text-danger"> * </span></label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{{NOMBRE}}}">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 text-right">
+            <button type="submit" class="btn btn-primary" data-placement="left" name="boton_objeto"
+                value="{{{OPERACION}}}" id='boton_objeto' title="Guardar">GUARDAR</button>
+            <a href="{{{CANCELAR}}}" class="btn btn-default">CANCELAR</a>
+        </div>
+    </div>
+</form
